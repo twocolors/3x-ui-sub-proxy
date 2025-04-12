@@ -1,0 +1,55 @@
+{
+  "name": "3x-ui-sub-proxy",
+  "version": "0.0.1",
+  "description": "Lightweight proxy server that provides subscriptions from the 3x-ui",
+  "author": "D",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "build:clean": "npm run clean && npm run build",
+    "clean": "rm -rf tsconfig.tsbuildinfo build",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "start": "node build/bin/main.js"
+  },
+  "bin": {
+    "3x-ui-sub-proxy": "./dist/bin/main.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "ky": "^1.8.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [
+    "proxy",
+    "subscription",
+    "3x-ui",
+    "lightweight"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twocolors/3x-ui-sub-proxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twocolors/3x-ui-sub-proxy/issues"
+  }
+}

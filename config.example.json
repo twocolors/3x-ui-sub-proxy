@@ -1,0 +1,27 @@
+{
+  "port": 8080,
+  "rules": {
+    "minLength": 40,
+    "maxLength": 40,
+    "regex": "^[a-zA-Z0-9_]+$"
+  },
+  "upload": "sum",
+  "download": "sum",
+  "total": "sum",
+  "expire": "max",
+  "headers": {
+    "support-url": "https://fb.com/",
+    "profile-title": "base64:0JPQvtC7PyDQpdGD0LkhINCo0YLQsNC90LPQsCEg8J+agA==",
+    "profile-update-interval": 4,
+    "content-type": "text/plain; charset=utf-8"
+  },
+  "threexui": [
+    {
+      "uri": "http://localhost:2096/sub/"
+    },
+    {
+      "uri": "https://fb.com/",
+      "timeout": 250
+    }
+  ]
+}
