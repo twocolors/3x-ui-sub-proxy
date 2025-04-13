@@ -7,7 +7,7 @@ RUN npm install && \
     npm run build:clean
 
 # Release
-FROM node:lts-alpine as release
+FROM node:lts-alpine AS release
 
 WORKDIR /app
 COPY --from=builder /app/node_modules ./node_modules
