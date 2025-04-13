@@ -22,7 +22,7 @@ export default tseslint.config(
       'node_modules/**',
       'build/**',
       'package-lock.json',
-      'config.example.json',
+      'data/config.json',
     ],
   },
 );

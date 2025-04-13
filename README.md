@@ -3,13 +3,9 @@
 
 Lightweight proxy server that provides subscriptions from the **3x-ui**
 
----
-
 ## 📦 Description
 
 This project implements a proxy server for aggregating and filtering subscriptions from the **3x-ui** system. It allows combining subscriptions from multiple sources, applying filtering, and returning the final subscription with customizable headers and statistics.
-
----
 
 ## 🔧 Features
 
@@ -18,11 +14,9 @@ This project implements a proxy server for aggregating and filtering subscriptio
 - ⚙️ Flexible aggregation of statistics (`upload`, `download`, `total`, `expire`)
 - 🧾 Support for custom HTTP headers (including base64 or string for titles)
 
----
-
 ## ⚙️ Configuration
 
-The `config.example.json` file:
+The `data/config.json` file:
 
 ```json
 {
@@ -74,8 +68,6 @@ The `config.example.json` file:
   - **`uri`**: The URL of the subscription source.
   - **`timeout`** (optional): Timeout for the request in milliseconds.
 
----
-
 ## 🚀 Running the Project
 
 1. Clone the project from GitHub:
@@ -105,10 +97,8 @@ The `config.example.json` file:
 5. Start the project:
 
    ```bash
-   npm run start config.example.json
+   npm run start data/config.json
    ```
-
----
 
 ## 🧪 Example Request
 
@@ -139,4 +129,30 @@ GET http://localhost:8080/40bd001563085fc35165329ea1ff5c5ecbdbbeef_1
 < Keep-Alive: timeout=5
 
 {"detail":"Not Found"}
+```
+
+## 🚀 Using Docker
+
+### Pull the Docker Image
+
+To pull the latest image, run:
+
+```bash
+docker pull ghcr.io/twocolors/3x-ui-sub-proxy:latest
+```
+
+### Run the Docker Container
+
+Run the container on port 8080 with:
+
+```bash
+docker run -d -p 8080:8080 ghcr.io/twocolors/3x-ui-sub-proxy:latest
+```
+
+### Configure with Custom File
+
+To mount a custom configuration file:
+
+```bash
+docker run -d -p 8080:8080 -v /path/to/config.json:/app/data/config.json ghcr.io/twocolors/3x-ui-sub-proxy:latest
 ```
