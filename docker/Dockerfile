@@ -1,6 +1,6 @@
 FROM node:lts-alpine AS builder
 
-ENV NODE_ENV=production
+# ENV NODE_ENV=production
 WORKDIR /app
 COPY . .
 RUN npm install && \
